@@ -32,7 +32,7 @@ def getdata(item,time_from,time_till,user,password):
     elif item == "knee":
         item = "41333"
 
-    z = ZabbixAPI("https://zabbix.telemedicineclinic.com/zabbix")
+    z = ZabbixAPI("https://yoururl")
     z.login(user,password)
     h = z.history.get(itemids=[item],time_from=time_from,time_till=time_till,output='extend',limit='5000',)
     res = results()
